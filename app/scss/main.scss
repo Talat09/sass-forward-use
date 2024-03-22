@@ -1,0 +1,17 @@
+//partial is used for small sections of code which reuseable example * code common for all css
+//don't use import and partial instant   @forward "file_url" and @use "file_url"
+@forward "./base/index";
+//@use code from another folder
+@use "./util/index" as variable;
+
+header {
+  background-color: variable.$header-background;
+  padding: variable.$headerMain-padding;
+}
+header h1 {
+  color: variable.$header-title;
+}
+main {
+  background-color: variable.$main-background;
+  padding: variable.$headerMain-padding;
+}
